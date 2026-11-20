@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="AdiStudy AI — your personal workspace for smarter study sessions.">
+  <title>AdiStudy AI — Study workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="AdiStudy AI home"><span class="brand-mark">a<span>i</span></span><span>adi<span class="brand-light">study</span></span></a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
+        <button class="nav-item" data-view="tutor"><span class="nav-icon">✳</span> AI Tutor <span class="nav-new">NEW</span></button>
+        <button class="nav-item" data-view="pdf"><span class="nav-icon">▤</span> PDF Assistant</button>
+        <button class="nav-item" data-view="quiz"><span class="nav-icon">☑</span> Quiz Generator</button>
+        <button class="nav-item" data-view="flashcards"><span class="nav-icon">▣</span> Flashcards</button>
+        <button class="nav-item" data-view="planner"><span class="nav-icon">▦</span> Study Planner</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-tip"><span class="tip-spark">✦</span><strong>Small steps add up.</strong><p>A focused 25-minute session can make all the difference.</p><button class="text-button" data-view="planner">View your plan <span>→</span></button></div>
+      <button class="profile"><span class="avatar">A</span><span class="profile-copy"><strong>Adi Student</strong><small>Free plan</small></span><span class="more">···</span></button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-title">Dashboard</strong></div><div class="top-actions"><span class="today-label" id="today-label"></span><button class="icon-button" aria-label="Notifications">♧<i></i></button><span class="avatar top-avatar">A</span></div></header>
+      <div class="content" id="view-content" tabindex="-1"></div>
+      <footer>AdiStudy AI <span>·</span> Your learning, one step at a time</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
